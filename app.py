@@ -19,9 +19,9 @@ model = load_and_train()
 
 # 2. User Inputs in Sidebar
 st.sidebar.header("Today's Habits")
-sleep = st.sidebar.slider("Sleep Hours", 0.0, 12.0, 7.0)
-water = st.sidebar.slider("Water Intake (Liters)", 0.0, 5.0, 2.0)
-steps = st.sidebar.number_input("Step Count", 0, 20000, 5000)
+sleep = st.sidebar.slider("Sleep_Hours", 0.0, 12.0, 7.0)
+water = st.sidebar.slider("Water_Liters", 0.0, 5.0, 2.0)
+steps = st.sidebar.number_input("Steps", 0, 20000, 5000)
 
 # 3. Prediction & Display
 prediction = model.predict([[sleep, water, steps]])[0]
